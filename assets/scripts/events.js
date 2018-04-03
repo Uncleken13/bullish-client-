@@ -2,6 +2,8 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+require('../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
+require('../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
 
 let dataId
 let selection
@@ -9,10 +11,47 @@ let selection
 const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
+  if (document.getElementById('password-field').value !==
+    document.getElementById('password-confirmation').value) {
+    console.log('what the fuck')
+    $.toast({
+      text: 'Thank you Mr. Crockett',
+      heading: 'Sign up failure!',
+      icon: 'warning',
+      showHideTransition: 'slide',
+      allowToastClose: true,
+      hideAfter: 3000,
+      stack: 5,
+      position: 'top-left',
+      textAlign: 'left',
+      loader: true,
+      loaderBg: 'red',
+      bgColor: 'red',
+      textColor: 'black'
+    })
+  } else {
+    api.signUp(data)
+      .then(ui.signUpSuccess)
+      .catch(ui.signUpFailure)
+  }
 
-  api.signUp(data)
-    .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure)
+// const confirmation = function (event) {
+//   event.preventDefault()
+//   if (document.getElementById('password-field').value !==
+//     document.getElementById('password-confirmation').value) {
+//     console.log('what the fuck')
+//   } else {
+//     onSignUp()
+//   }
+
+  // $('#password-field, #password-confirmation').on('keyup', function () {
+  //   if ($('#password-field').val() === $('#password-confirmation').val()) {
+  //     console.log('we protected motherfuckas')
+  //   } else {
+  //     console.log('do not match')
+  //     return
+  //   }
+  // })
 }
 
 const onSignIn = function (event) {
