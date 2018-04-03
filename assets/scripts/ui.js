@@ -5,6 +5,7 @@ require('../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
 
 let zeros
 let ones
+let twos
 
 const signUpSuccess = function (data) {
   $('#email-field').val('')
@@ -185,13 +186,17 @@ const showOneSuccess = function (data) {
   store.survey = data.survey
   $('#showOptionOne').html(store.survey.optionOne)
   $('#showOptionTwo').html(store.survey.optionTwo)
+  $('#showOptionThree').html(store.survey.optionThree)
 
   zeros = store.survey.responses.filter(x => x === 0)
 
   ones = store.survey.responses.filter(x => x === 1)
 
+  twos = store.survey.responses.filter(x => x === 2)
+
   $('#zeros').html('Votes for ' + store.survey.optionOne + ': ' + zeros.length)
   $('#ones').html('Votes for ' + store.survey.optionTwo + ': ' + ones.length)
+  $('#twos').html('Votes for ' + store.survey.optionThree + ': ' + twos.length)
 }
 
 const createSuccessful = function (data) {
@@ -199,6 +204,7 @@ const createSuccessful = function (data) {
   // $('#message').css('background-color', 'green')
   $('#createOptionOne').val('')
   $('#createOptionTwo').val('')
+  $('#createOptionThree').val('')
   $('#handlebars-here').html('Click show my surveys to see changes')
 
   $.toast({
@@ -246,6 +252,7 @@ const updateSuccess = function () {
   $('#updateId').val('')
   $('#updateOptionOne').val('')
   $('#updateOptionTwo').val('')
+  $('#updateOptionThree').val('')
   $('#handlebars-here').html('Click show my surveys to see changes')
 
   $.toast({
@@ -271,6 +278,7 @@ const updateFailed = function (data) {
   $('#updateId').val('')
   $('#updateOptionOne').val('')
   $('#updateOptionTwo').val('')
+  $('#updateOptionThree').val('')
 
   $.toast({
     text: 'Thank you Mr. Crockett',

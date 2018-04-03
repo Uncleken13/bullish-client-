@@ -13,7 +13,6 @@ const onSignUp = function (event) {
   const data = getFormFields(this)
   if (document.getElementById('password-field').value !==
     document.getElementById('password-confirmation').value) {
-    console.log('what the fuck')
     $.toast({
       text: 'Thank you Mr. Crockett',
       heading: 'Sign up failure!',
@@ -155,6 +154,9 @@ const addHandlers = () => {
   })
   $('#showOptionTwo').on('click', () => {
     selection = 1
+  })
+  $('#showOptionThree').on('click', () => {
+    selection = 2
   })
   $('.create-response-button').on('click', onCreateResponse)
 }
