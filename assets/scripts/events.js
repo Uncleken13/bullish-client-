@@ -29,6 +29,9 @@ const onSignUp = function (event) {
       bgColor: 'red',
       textColor: 'black'
     })
+    $('#email-field').val('')
+    $('#password-field').val('')
+    $('#password-confirmation').val('')
   } else {
     api.signUp(data)
       .then(ui.signUpSuccess)

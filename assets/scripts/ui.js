@@ -34,7 +34,7 @@ const signUpFailure = function () {
   // $('#message').css('background-color', 'red')
   $('#email-field').val('')
   $('#password-field').val('')
-  $('#password-conformation-field').val('')
+  $('#password-confirmation').val('')
 
   $.toast({
     text: 'Thank you Mr. Crockett',
