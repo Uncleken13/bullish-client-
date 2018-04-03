@@ -92,6 +92,8 @@
       <input type="text" name="survey[optionOne]" id="createOptionOne" placeholder="Choice One" required>
       <p id="addSomething">Or</p>
       <input type="text" name="survey[optionTwo]" id="createOptionTwo" placeholder="Choice Two" required>
+      <p id="addSomething">Or</p>
+      <input type="text" name="survey[optionThree]" id="createOptionThree" placeholder="Choice Three" required>
     </fieldset>
   </form>
   <!-- END OF CREATE SURVEY FORM -->
@@ -113,6 +115,7 @@
       <input type="text" name="survey[id]" id="updateId" placeholder="Survey ID Here" required><br>
       <input type="text" name="survey[optionOne]" id="updateOptionOne" placeholder="Update Choice One" required><br>
       <input type="text" name="survey[optionTwo]" id="updateOptionTwo" placeholder="Update Choice Two" required><br>
+      <input type="text" name="survey[optionThree]" id="updateOptionThree" placeholder="Update Choice Three" required><br>
     </fieldset>
   </form>
   <!-- END OF UPDATE FORM -->
@@ -160,6 +163,12 @@
                   <div id="optionTwo-feedback"></div>
                 </div>
               </li>
+              <li class="list-group-item">
+                <div class="radio">
+                  <button class="create-response-button" id="showOptionThree"></button>
+                  <div id="optionThree-feedback"></div>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="modal-footer">
@@ -167,6 +176,7 @@
           </div>
           <div id="zeros"></div>
           <div id="ones"></div>
+          <div id="twos"></div>
         </div>
       </div>
     </div>
