@@ -1,7 +1,7 @@
 const store = require('./store')
 const showSurveysTemplate = require('./templates/survey-list.handlebars')
-require('../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
-require('../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
+require('./../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
+require('./../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
 
 let zeros
 let ones

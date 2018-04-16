@@ -2,8 +2,8 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-require('../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
-require('../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
+require('./../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
+require('./../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
 
 let dataId
 let selection
