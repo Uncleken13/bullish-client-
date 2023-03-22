@@ -34,7 +34,7 @@
     "grunt-nodemon": "^0.4.2",
     "grunt-open": "^0.2.3",
     "grunt-sass-lint": "^0.2.2",
-    "grunt-shell": "^2.1.0",
+    "grunt-shell": "^4.0.0",
     "grunt-webpack": "^3.0.2",
     "handlebars": "^4.0.10",
     "handlebars-loader": "^1.5.0",
