@@ -25,7 +25,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "expose-loader": "^0.7.3",
-    "file-loader": "^1.0.0",
+    "file-loader": "^6.0.0",
     "grunt": "^1.0.1",
     "grunt-concurrent": "^2.3.1",
     "grunt-eslint": "^20.0.0",
