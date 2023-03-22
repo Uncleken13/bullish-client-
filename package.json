@@ -46,7 +46,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "time-grunt": "^1.4.0",
-    "url-loader": "^0.5.9",
+    "url-loader": "^4.0.0",
     "webpack": "^3.5.1",
     "webpack-dev-server": "^2.7.1"
   }
